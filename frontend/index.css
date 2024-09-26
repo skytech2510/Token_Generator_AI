@@ -1,0 +1,88 @@
+:root {
+  --c-gray: rgba(128, 128, 128, 1);
+  --c-light-gray: rgba(192, 192, 192, 1);
+}
+
+* {
+  -webkit-font-smoothing: antialiased !important;
+}
+
+.button {
+  font-size: 16px !important;
+  padding-block: 7.5px !important;
+  padding-inline: 24px !important;
+  background-color: var(--c-light-gray) !important;
+}
+
+.ty-h1,
+h1 {
+  font-size: 64px !important;
+  font-weight: bold !important;
+}
+
+.ty-h2,
+h2 {
+  font-size: 50px !important;
+  font-weight: bold !important;
+}
+
+.ty-h3,
+h3 {
+  font-size: 44px !important;
+  line-height: 44px;
+  font-weight: bold !important;
+}
+
+.ty-h4,
+h4 {
+  font-size: 32px !important;
+  line-height: 48px;
+  font-weight: bold !important;
+}
+
+.ty-h6,
+h6 {
+  font-size: 20px !important;
+  font-weight: bold !important;
+}
+
+.ty-p1 {
+  font-size: 16px;
+  font-weight: normal;
+}
+.ty-p2 {
+  font-size: 14px;
+  font-weight: normal;
+}
+.ty-p3 {
+  font-size: 12px;
+  line-height: 18px;
+  font-weight: normal;
+}
+
+.ty-b1 {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+abbr {
+  text-decoration: none;
+}
+
+.truncate {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  flex-shrink: 1;
+  max-width: 100px;
+}
+
+.visually-hidden {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}

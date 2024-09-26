@@ -1,0 +1,76 @@
+.MuiOutlinedInput-root .MuiAutocomplete-input,
+.MuiChip-label {
+  font-family: "Pixelated MS Sans Serif", Arial;
+  box-shadow: none;
+}
+
+.MuiOutlinedInput-root .MuiAutocomplete-endAdornment,
+.MuiAutocomplete-root:hover .MuiAutocomplete-clearIndicator {
+  right: 0px !important;
+  visibility: hidden !important;
+}
+
+.MuiAutocomplete-root {
+  .MuiOutlinedInput-root {
+    .MuiAutocomplete-input {
+      padding: 8px !important;
+      margin: 0;
+      margin-right: 24px;
+    }
+  }
+  .MuiAutocomplete-input {
+    opacity: 1;
+  }
+  .MuiAutocomplete-inputRoot {
+    display: flex;
+    align-items: center;
+    background: white;
+    height: 100%;
+    box-shadow:
+      inset -1px -1px #fff,
+      inset 1px 1px grey,
+      inset -2px -2px #dfdfdf,
+      inset 2px 2px #0a0a0a;
+    border-radius: 0;
+    padding: 0.5rem;
+  }
+  .MuiAutocomplete-tag {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px dashed;
+    height: 40px;
+    line-height: normal;
+  }
+}
+
+.MuiChip-label {
+  font-size: 16px;
+}
+
+.MuiChip-deleteIcon {
+  color: rgba(0, 0, 0, 0.87) !important;
+}
+
+.MuiFormControl-root-MuiTextField-root {
+  align-items: center;
+}
+
+.MuiInputBase-root {
+  &.MuiOutlinedInput-root {
+    justify-content: flex-start;
+  }
+}
+
+.token-core-traits [data-isvalid="false"]::after,
+.token-core-traits [data-isvalid="true"]::after {
+  position: absolute !important;
+  height: 100% !important;
+  background-repeat: no-repeat !important;
+  background-position: center !important;
+  top: 0px !important;
+}
+
+fieldset {
+  visibility: hidden;
+}

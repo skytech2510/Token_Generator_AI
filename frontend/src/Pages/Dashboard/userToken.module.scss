@@ -1,0 +1,91 @@
+.emptyStateContainer {
+  width: 100%;
+  height: 320px;
+  border: 2px solid var(--c-gray);
+}
+
+.tokenListContainer {
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+
+  button {
+    min-width: unset;
+    scroll-snap-align: start;
+  }
+}
+.tokenListContainer::-webkit-scrollbar {
+  display: none;
+}
+
+.buttonContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 8px;
+}
+.iconButton {
+  border-radius: 50%;
+  padding-inline: 10px !important;
+  padding-block: 10px !important;
+  min-width: unset;
+  min-height: unset;
+}
+
+.tokenButton {
+  padding-inline: 8px !important;
+  padding-block: 8px !important;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 6px;
+
+  .tokenImageContainer {
+    background: url("/src/Assets/Images/BG/p_grid.svg"), var(--c-light-gray);
+    aspect-ratio: 237/131;
+    height: 131px;
+    max-width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    img {
+      aspect-ratio: 1;
+      height: 80px;
+      border-radius: 50%;
+    }
+  }
+
+  .tokenDetailsContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: flex-start;
+    gap: 8px;
+    width: 100%;
+
+    div {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+    }
+  }
+
+  .tokenViewMoreButton {
+    border: 2px solid rgba(128, 128, 128, 1);
+    box-shadow: unset;
+    border-radius: 40px;
+    font-size: 12px;
+    line-height: 18px;
+    padding-block: 8px;
+  }
+}

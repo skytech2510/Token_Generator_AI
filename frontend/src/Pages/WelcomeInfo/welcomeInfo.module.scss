@@ -1,0 +1,55 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: center;
+  gap: 24px;
+  position: relative;
+}
+
+.welcomeContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  gap: 24px;
+
+  .scene {
+    aspect-ratio: 294/314;
+    min-width: 200px;
+    align-self: stretch;
+    width: min(50%, 300px);
+    border: 2px solid var(--c-gray);
+  }
+
+  .description {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: center;
+    gap: 24px;
+    flex: 1;
+    min-width: 250px;
+
+    div {
+      display: flex;
+      flex-direction: column;
+      align-items: stretch;
+      justify-content: center;
+      gap: 8px;
+    }
+  }
+}
+
+.welcomeFooter {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  button {
+    flex-grow: 1;
+  }
+}

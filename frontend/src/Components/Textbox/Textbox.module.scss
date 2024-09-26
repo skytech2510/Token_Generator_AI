@@ -1,0 +1,66 @@
+.textboxContainer {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 4px;
+  margin: 8px 0;
+  background-color: #c3c3c3;
+  border: 2px solid #000;
+  border-right: 2px solid #fff;
+  border-bottom: 2px solid #fff;
+  box-shadow:
+    2px 2px 0 #fff,
+    4px 4px 0 #000;
+}
+
+.chipContainer {
+  display: inline-flex;
+  align-items: center;
+  padding: 4px 8px;
+  margin: 4px;
+  background-color: #c3c3c3;
+  border: 2px solid #000;
+  border-right: 2px solid #fff;
+  border-bottom: 2px solid #fff;
+  font-family: "MS Sans Serif", sans-serif;
+  font-size: 14px;
+  color: #000;
+  box-shadow:
+    2px 2px 0 #fff,
+    4px 4px 0 #000;
+  cursor: pointer;
+
+  &:hover {
+    background-color: #e4e4e4;
+  }
+}
+
+.deleteButton {
+  margin-left: 8px;
+  padding: 2px 6px;
+  background-color: #c3c3c3;
+  border: 2px solid #000;
+  border-right: 2px solid #fff;
+  border-bottom: 2px solid #fff;
+  cursor: pointer;
+
+  &:hover {
+    background-color: #e4e4e4;
+  }
+}
+
+.styledInput {
+  flex-grow: 1;
+  min-width: 100px;
+  padding: 4px;
+  border: none;
+  font-family: "MS Sans Serif", sans-serif;
+  font-size: 14px;
+  color: #000;
+  background-color: #e4e4e4;
+  box-shadow: inset 2px 2px 0 #fff;
+
+  &:focus {
+    outline: none;
+  }
+}

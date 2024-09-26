@@ -1,0 +1,339 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: flex-start;
+  gap: 24px;
+}
+
+.bodyContainer {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: row;
+  gap: 24px;
+}
+
+.body {
+  display: flex;
+  align-items: stretch;
+  justify-content: space-between;
+  flex-direction: column;
+  gap: 16px;
+  flex: 1;
+}
+.centerBody {
+  align-self: center;
+  justify-content: flex-start;
+}
+
+.tooltip {
+  // display: inline-block;
+  // margin-right: 8px;
+  content: "";
+  position: absolute;
+  height: 24px;
+  width: 24px;
+  background: url("/src/Assets/Images/Icons/info.png");
+  background-size: 24px 24px;
+  background-position: center;
+  object-fit: cover;
+  border-radius: 50%;
+  right: 85px;
+  top: 285px;
+}
+.tooltipBubble {
+  transform: translate(24px, -90%, -40%);
+}
+
+.inputGroup {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: flex-start;
+  gap: 8px;
+
+  label {
+    font-size: 16px;
+    font-weight: bold;
+  }
+
+  .inputContainer {
+    position: relative;
+    input {
+      padding: 8px !important;
+      font-size: 16px;
+      position: relative;
+      width: 100%;
+      height: unset !important;
+      line-height: 24px;
+    }
+
+    &[data-isvalid="true"]::after {
+      content: "";
+      position: absolute;
+      height: 24px;
+      width: 24px;
+      background: url("/src/Assets/Images/Icons/check.png");
+      background-size: 24px 24px;
+      background-position: center;
+      object-fit: cover;
+      border-radius: 50%;
+      right: 8px;
+      top: 8px;
+    }
+
+    &[data-isvalid="false"]::after {
+      content: "";
+      position: absolute;
+      height: 24px;
+      width: 24px;
+      background: url("/src/Assets/Images/Icons/red-close.png");
+      background-size: 24px 24px;
+      background-position: center;
+      object-fit: cover;
+      border-radius: 50%;
+      right: 8px;
+      top: 8px;
+    }
+  }
+
+  div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+}
+
+.sliderInputGroup {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: flex-start;
+  gap: 8px;
+
+  label {
+    font-size: 16px;
+    font-weight: bold;
+  }
+
+  .sliderLabelRow {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    label {
+      font-size: 12px;
+      font-weight: normal;
+    }
+  }
+
+  input[type="range"] {
+    margin-bottom: 8px;
+  }
+}
+
+.sceneContainer {
+  height: 351px;
+  width: 294px;
+  border: 2px solid var(--c-gray);
+}
+
+.imgDropZone {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px dashed var(--c-gray);
+  position: relative;
+}
+.activeImageDropZone::after {
+  content: "";
+  inset: 0;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  z-index: 10;
+  background: rgb(0, 0, 0, 0.3);
+}
+
+.imgPickerControl {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+
+  img {
+    height: 80px;
+    aspect-ratio: 1;
+  }
+
+  .imgPickerLabelGroup {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: flex-start;
+    gap: 8px;
+
+    [type="file"]input {
+      opacity: 0;
+      height: 0;
+      width: 0;
+    }
+
+    button {
+      padding-block: 8px;
+      padding-inline: 24px;
+      font-size: 16px;
+      width: 100%;
+    }
+  }
+}
+
+.stepContainer {
+  display: flex;
+  align-items: stretch;
+  justify-content: flex-start;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.stepFooterWrapper {
+  display: flex;
+  align-items: stretch;
+  justify-content: flex-start;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.stepFooter {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+
+  button {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+    padding-block: 8px;
+    padding-inline: 24px;
+    font-size: 16px;
+
+    &[data-secondary="true"] {
+      flex: 0.5;
+    }
+  }
+}
+
+.stepRadioFooter {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+
+  div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+    padding-block: 8px;
+    padding-inline: 24px;
+    font-size: 16px;
+
+    border: 2px solid var(--c-gray);
+    border-radius: 100px;
+  }
+}
+
+.imageContainer {
+  width: 100%;
+  aspect-ratio: 777/191;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: url("/src/Assets/Images/BG/p_grid.svg");
+  background-size: cover;
+  background-position: center;
+  border: 2px solid var(--c-gray);
+
+  img {
+    aspect-ratio: 1;
+    height: 150px;
+    border-radius: 50%;
+  }
+}
+
+.stepDisclaimer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding-inline: 24px;
+  padding-block: 8px;
+
+  border: 2px solid var(--c-gray);
+  border-radius: 100px;
+
+  font-size: 12px;
+  line-height: 18px;
+}
+
+.infoGroupContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: flex-start;
+  gap: 24px;
+}
+
+.infoRow {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 100px;
+}
+
+.infoContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  flex: 1;
+
+  p {
+    &:last-child {
+      font-weight: bold;
+      font-size: 20px;
+    }
+  }
+}
+
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.loader {
+  margin-top: calc(40px - 24px);
+}
+
+.traitsContainer {
+  display: flex;
+  align-items: center;
+  padding: 8px;
+  background-color: #fff;
+  border: 1px solid #000;
+  font-family: "MS Sans Serif", Tahoma, Geneva, sans-serif;
+  font-size: 12px;
+  color: #000;
+}

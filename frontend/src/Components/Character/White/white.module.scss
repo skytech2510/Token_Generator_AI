@@ -1,0 +1,15 @@
+.container {
+  position: relative;
+  img {
+    &[data-inverted="true"] {
+      transform: scaleX(-1);
+    }
+  }
+}
+
+.bubbleContainer {
+  position: absolute;
+  top: -40%;
+  left: -70%;
+  z-index: 10;
+}

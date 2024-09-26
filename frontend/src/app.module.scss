@@ -1,0 +1,50 @@
+$gray: rgba(223, 223, 223, 1);
+$dark-gray: rgba(128, 128, 128, 1);
+$black: black;
+$white: white;
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-size: 16px !important;
+  line-height: 24px !important;
+}
+
+.bodyContainer {
+  background-color: $gray;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.mainContainer {
+  padding-inline: min(10%, 50px) !important;
+  padding-block: min(10%, 50px) !important;
+  width: min(877px, 100%);
+  font-size: 1rem !important;
+  background: $gray !important;
+  overflow: auto;
+
+  position: relative;
+}
+
+.loader {
+  position: absolute;
+  z-index: 100;
+  background-color: rgba(128, 128, 128, 0.5);
+  backdrop-filter: blur(1px);
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: flex-start;
+
+  progress {
+    block-size: 5px;
+    inline-size: 100%;
+  }
+}

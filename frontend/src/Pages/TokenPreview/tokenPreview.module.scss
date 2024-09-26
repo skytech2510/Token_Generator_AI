@@ -1,0 +1,162 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: flex-start;
+  gap: 24px;
+}
+
+.body {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: flex-start;
+
+  .social {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 24px;
+
+    padding-inline: 24px;
+    height: 64px;
+
+    background-color: #897149;
+
+    a {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+
+      padding-inline: 16px;
+      padding-block: 8px;
+      gap: 10px;
+
+      border: 1px solid white;
+      border-radius: 100px;
+
+      text-decoration: none;
+      color: white;
+      font-size: 16px;
+    }
+  }
+}
+
+.tokenCard {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: flex-start;
+  gap: 0px;
+  padding: 24px;
+
+  background: url("/src/Assets/Images/BG/bus.png") rgba(0, 0, 0, 0.64);
+  background-size: 100% 100%;
+  background-blend-mode: multiply;
+
+  color: white;
+
+  .tokenCardMain {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+    padding-bottom: 24px;
+    border-bottom: 2px dashed #808080;
+
+    .mainDetails {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 40px;
+      flex: 1;
+      padding-inline: 40px;
+
+      .pill {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        gap: 12px;
+        width: 100%;
+
+        font-weight: bold;
+        font-size: 20px;
+
+        padding-inline: 24px;
+        padding-block: 8px;
+
+        border: 2px solid white;
+        border-radius: 100px;
+      }
+    }
+  }
+
+  .tokenCardDetails {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+    padding-top: 24px;
+
+    .verticalHr {
+      width: 0px;
+      border-left: 2px dashed #808080;
+      align-self: stretch;
+    }
+
+    .infoColumn {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: center;
+      flex: 1;
+
+      gap: 24px;
+
+      .tokenInfo {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        white-space: nowrap;
+        gap: 12px;
+      }
+    }
+  }
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: flex-start;
+  gap: 24px;
+
+  div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 8px;
+    flex-wrap: wrap;
+
+    button {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      flex-grow: 1;
+      padding-block: 8px;
+      padding-inline: 24px;
+      font-size: 16px;
+    }
+  }
+}

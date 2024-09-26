@@ -1,0 +1,10 @@
+[dependencies]
+base = "0.11.1"
+xrc-types = "1.0.0"
+map = "9.0.1"
+alfangodb = "https://github.com/sagcryptoicp/alfangodb#master@2127b62cd0cb69f49881bb2a61cb2685ce214947"
+rand = "https://github.com/aviate-labs/rand.mo#v0.2.3"
+ulid = "https://github.com/aviate-labs/ulid.mo#v0.1.3"
+d3storage = "https://github.com/ragpatel8742/d3storage#main@d618819e85fe741569d9b54c54cb5e4a489be3fa"
+httpParser = "https://github.com/NatLabs/http-parser.mo#v0.1.2@27cba8ed0d39387e0fb660f65909ffe2a7d54413"
+ic = "1.0.1"

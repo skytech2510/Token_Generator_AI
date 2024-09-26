@@ -1,0 +1,28 @@
+.container {
+  aspect-ratio: 1;
+  width: 24px;
+  position: relative;
+  display: inline;
+  background: url("/src/Assets/Images/Icons/info.png");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.bubbleContent {
+  position: absolute;
+  z-index: 10;
+  max-width: 212px;
+  transform: translate(-100%, -100%);
+  opacity: 0;
+  animation: fade-in 300ms ease-in-out forwards;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

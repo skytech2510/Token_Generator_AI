@@ -1,0 +1,65 @@
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.backdrop {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  inset: 0;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  animation: fade 200ms ease-in-out forwards;
+  z-index: 100;
+}
+
+.container {
+  width: 320px;
+}
+
+.header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 8px;
+  padding-inline: 16px;
+  padding-block: 8px;
+}
+
+.body {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding-block-end: 25px;
+  padding-block-start: 8px;
+  padding-inline: 16px;
+
+  button {
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: space-between !important;
+    align-items: center;
+    font-size: 16px !important;
+    line-height: 24px !important;
+    padding-block: 8px !important;
+    padding-inline: 7.5px !important;
+
+    img {
+      aspect-ratio: 1;
+      height: 32px;
+      border-radius: 50%;
+    }
+  }
+}

@@ -1,0 +1,141 @@
+$black: #000;
+$white: #dfdfdf;
+$shadow: rgba(0, 0, 0, 0.1);
+
+$px: 4px;
+
+$bubble-border: 0 -1 * $px $white, 0 -2 * $px $black, $px 0 $white,
+  $px -1 * $px $black, 2 * $px 0 $black, 0 $px $white, 0 2 * $px $black,
+  -1 * $px 0 $white, -1 * $px $px $black, -2 * $px 0 $black,
+  -1 * $px -1 * $px $black, $px $px $black;
+
+.bubble {
+  position: relative;
+  display: inline-block;
+  margin: 5 * $px;
+  text-align: center;
+  font-size: 16px;
+  line-height: 1.3em;
+  font-weight: bold;
+  background-color: $white;
+  color: $black;
+  padding: 2 * $px;
+  box-shadow: $bubble-border;
+  white-space: break-spaces;
+
+  box-sizing: border-box;
+
+  img {
+    aspect-ratio: 1;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    box-sizing: border-box;
+  }
+
+  &.shadow {
+    box-shadow: $bubble-border, $px 3 * $px $shadow, 3 * $px $px $shadow,
+      2 * $px 2 * $px $shadow;
+  }
+
+  &.tooltip {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 18px;
+    text-align: left;
+    max-width: 212px;
+    width: max-content;
+  }
+
+  &.mini {
+    width: 110px;
+    font-size: 16px;
+    padding: 4px;
+    font-family: monospace;
+  }
+  &.medium {
+    width: 350px;
+  }
+  &.large {
+    width: 560px;
+    font-size: 24px;
+    text-align: left;
+    text-transform: uppercase;
+  }
+  &.grow {
+    width: initial;
+  }
+
+  &.top::after {
+    height: $px;
+    width: $px;
+    top: -2 * $px;
+    left: 8 * $px;
+    box-shadow: 0 -1 * $px $black, 0 -2 * $px $black, 0 -3 * $px $black,
+      0 -4 * $px $black, -1 * $px -3 * $px $black, -2 * $px -2 * $px $black,
+      -3 * $px -1 * $px $black, -1 * $px -1 * $px $white,
+      -2 * $px -1 * $px $white, -1 * $px -2 * $px $white, -1 * $px 0 $white,
+      -2 * $px 0 $white, -3 * $px 0 $white;
+  }
+
+  &.right::after {
+    height: $px;
+    width: $px;
+    top: 5 * $px;
+    right: -2 * $px;
+    background: white;
+    box-shadow: 1 * $px -1 * $px $white, 1 * $px 0 $white, 2 * $px 0 $white,
+      0 -2 * $px $white, 1 * $px 1 * $px $black, 2 * $px 1 * $px $black,
+      3 * $px 1 * $px $black, 4 * $px 1 * $px $black, 3 * $px 0 $black,
+      2 * $px -1 * $px $black, 1 * $px -2 * $px $black, 0 -1 * $px $white;
+  }
+
+  &.bottom::after {
+    height: $px;
+    width: $px;
+    bottom: -2 * $px;
+    left: 5 * $px;
+    box-shadow: 0 $px $black, 0 2 * $px $black, 0 3 * $px $black,
+      0 4 * $px $black, -1 * $px 3 * $px $black, -2 * $px 2 * $px $black,
+      -3 * $px 1 * $px $black, -1 * $px $px $white, -2 * $px $px $white,
+      -1 * $px 2 * $px $white, -1 * $px 0 $white, -2 * $px 0 $white,
+      -3 * $px 0 $white;
+    transform: scaleX(-1);
+  }
+  &.inverted::after {
+    transform: scaleX(1);
+    left: initial;
+    right: 5 * $px;
+  }
+
+  &.left::after {
+    height: $px;
+    width: $px;
+    top: 5 * $px;
+    left: -2 * $px;
+    background: white;
+    box-shadow: -1 * $px -1 * $px $white, -1 * $px 0 $white, -2 * $px 0 $white,
+      0 -2 * $px $white, -1 * $px 1 * $px $black, -2 * $px 1 * $px $black,
+      -3 * $px 1 * $px $black, -4 * $px 1 * $px $black, -3 * $px 0 $black,
+      -2 * $px -1 * $px $black, -1 * $px -2 * $px $black, 0 -1 * $px $white;
+  }
+}
+
+@keyframes bubble-anim {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.animate {
+  animation: bubble-anim 700ms ease-in-out forwards;
+}

@@ -1,0 +1,24 @@
+.container {
+  padding: 8px;
+  position: relative;
+  overflow: hidden;
+}
+
+@keyframes loading {
+  0% {
+    transform: scaleX(0);
+  }
+  100% {
+    transform: scaleX(1);
+  }
+}
+
+.loader {
+  height: 24px;
+  width: 100%;
+  background: linear-gradient(to right, #1084d0, #000080);
+  transform-origin: left center;
+  transform: scaleX(0);
+
+  animation: loading 2s infinite linear alternate;
+}

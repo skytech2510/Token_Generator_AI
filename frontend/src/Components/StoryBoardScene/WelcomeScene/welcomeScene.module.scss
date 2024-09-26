@@ -1,0 +1,14 @@
+.background {
+  background: url("/src/Assets/Images/BG/savannah.png");
+  background-size: 100% 100%;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  position: relative;
+}
+
+.jesseContainer {
+  position: absolute;
+  bottom: 8%;
+  left: 8%;
+}

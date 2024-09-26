@@ -1,0 +1,35 @@
+$roadheight: 48px;
+
+.background {
+  background: url("/src/Assets/Images/BG/bus.png");
+  background-size: 100% calc(100% - $roadheight + 12px);
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  position: relative;
+}
+
+.jesseContainer {
+  position: absolute;
+  bottom: calc($roadheight - 16px);
+  left: 8%;
+  z-index: 10;
+}
+
+.whiteContainer {
+  position: absolute;
+  bottom: $roadheight;
+  bottom: calc($roadheight - 16px);
+  right: 8%;
+  z-index: 10;
+}
+
+.road {
+  background: url("/src/Assets/Images/BG/road_black.svg");
+  background-repeat: repeat-x repeat-y;
+  width: 100%;
+  height: $roadheight;
+  object-fit: cover;
+  position: absolute;
+  bottom: 0;
+}

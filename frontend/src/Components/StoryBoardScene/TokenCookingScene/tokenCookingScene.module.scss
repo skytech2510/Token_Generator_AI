@@ -1,0 +1,149 @@
+$charTiming: cubic-bezier(1, -0.15, 0.74, 0.1);
+$cloudTiming: cubic-bezier(1, -0.01, 0.57, 0.54);
+$flaskTiming: cubic-bezier(1, 0.03, 0, 1.03);
+$charInset: 2;
+
+$flaskSteps: 4;
+$flaskHalfSteps: 2;
+$flaskVerticalDisplacement: 10;
+
+$delay: 200ms;
+
+.container {
+  width: 100%;
+  background: url("/src/Assets/Images/BG/road_color.svg");
+  height: 200px;
+  background-position: bottom;
+  background-repeat: no-repeat;
+  position: relative;
+  container-type: size;
+}
+
+.jesseContainer,
+.whiteContainer {
+  position: absolute;
+  bottom: 0px;
+  z-index: 10;
+}
+
+.bigCloud,
+.smallCloud {
+  position: absolute;
+  z-index: 5;
+}
+
+@keyframes jesse-wave {
+  0% {
+    transform: translateX(0);
+  }
+  45% {
+    transform: translateX(#{$charInset}cqw);
+  }
+  50% {
+    transform: translateX(#{$charInset}cqw);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
+
+@keyframes white-wave {
+  0% {
+    transform: translateX(0);
+  }
+  45% {
+    transform: translateX(-#{$charInset}cqw);
+  }
+  50% {
+    transform: translateX(-#{$charInset}cqw);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
+
+.jesseContainer {
+  right: #{$charInset}cqw;
+  animation: jesse-wave 2s $charTiming infinite reverse;
+  animation-delay: $delay;
+}
+
+.whiteContainer {
+  left: #{$charInset}cqw;
+  animation: white-wave 2s $charTiming infinite reverse;
+  animation-delay: $delay;
+}
+
+@keyframes big-cloud-wave {
+  0% {
+    transform: translateX(0);
+  }
+  45% {
+    transform: translateX(-50cqw);
+  }
+  55% {
+    transform: translateX(-50cqw);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes small-cloud-wave {
+  0% {
+    transform: translateX(0);
+  }
+  45% {
+    transform: translateX(50cqw);
+  }
+  50% {
+    transform: translateX(50cqw);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.bigCloud {
+  top: 25%;
+  right: 20%;
+  animation: big-cloud-wave 2s $cloudTiming infinite reverse;
+  animation-delay: $delay;
+}
+.smallCloud {
+  top: 50%;
+  left: 20%;
+  animation: small-cloud-wave 2s $cloudTiming infinite reverse;
+  animation-delay: $delay;
+}
+
+@keyframes flask-move {
+  @for $i from 1 through $flaskSteps {
+    #{calc($i * 80% / $flaskSteps)} {
+      transform: translateX(#{$i * calc(64 / $flaskSteps)}cqw)
+        translateY(
+          if(
+            $i<$flaskHalfSteps,
+            -#{($i % $flaskHalfSteps) * $flaskVerticalDisplacement}cqh,
+            -#{(
+                ($i % $flaskHalfSteps) +
+                  ($flaskSteps - $i) *
+                  $flaskVerticalDisplacement
+              )}cqh
+          )
+        );
+    }
+  }
+  100% {
+    transform: translateX(0) translateY(0);
+  }
+}
+
+.flask {
+  position: absolute;
+  z-index: 11;
+  bottom: 30%;
+  left: 16%;
+  animation: flask-move 4s $flaskTiming infinite forwards;
+  animation-delay: $delay;
+}

@@ -1,0 +1,43 @@
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+  padding: 8px !important;
+  position: relative;
+}
+
+.step {
+  display: flex;
+  position: relative;
+  flex: 1;
+  background: linear-gradient(to right, #808080, #b5b5b5);
+  height: 24px;
+}
+
+@keyframes expand {
+  from {
+    width: 0px;
+  }
+  to {
+    width: calc-size(auto);
+  }
+}
+
+[data-active="true"].step::after {
+  content: "";
+  position: absolute;
+  background: linear-gradient(to right, #000080, #1084d0);
+  height: 100%;
+  width: 100%;
+  animation: expand 300ms ease-in-out forwards;
+}
+
+.stepInfo {
+  position: absolute;
+  top: -24px;
+  right: 0px;
+  font-size: 12px;
+}
